@@ -5,7 +5,7 @@ class PlaceName extends Component {
   state = { name: 'Načítám název místa...' };
 
   getNominatimUrl = (lon, lat) =>
-    `http://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=18&addressdetails=1&accept-language=cs`;
+    `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=18&addressdetails=1&accept-language=cs`;
 
   componentWillMount() {
     this.loadName(this.props);

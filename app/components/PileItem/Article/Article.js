@@ -16,7 +16,8 @@ const Article = ({
     target='_blank'
     primaryText={title}
     secondaryText={url}
-    leftAvatar={<Avatar src={makePeekUrl(url)} />} />
+    leftAvatar={<Avatar src={makePeekUrl(url)} />}
+    rightAvatar={<Avatar src={facebookProfileUrl(author.fbid)} />} />
 );
 
 export default Article;
