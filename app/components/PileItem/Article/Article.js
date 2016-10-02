@@ -7,14 +7,16 @@ const makePeekUrl = (url, size = 64) =>
   `https://icons.better-idea.org/icon?url=${encodeURIComponent(url)}&size=${size}`;
 
 const Article = ({
+  title = 'Odkaz na článek',
   url,
   author
 }) => (
   <ListItem
-    primaryText='Odkaz na článek'
+    href={url}
+    target='_blank'
+    primaryText={title}
     secondaryText={url}
-    leftAvatar={<Avatar src={makePeekUrl(url)} />}
-    rightAvatar={<Avatar src={facebookProfileUrl(author.fbid)} />} />
+    leftAvatar={<Avatar src={makePeekUrl(url)} />} />
 );
 
 export default Article;

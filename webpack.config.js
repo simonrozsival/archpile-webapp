@@ -27,6 +27,15 @@ module.exports = {
     ]
   },
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: {
+      rewrites: [
+        {
+          from: /^.*$/,
+          to: function() {
+            return 'index.html';
+          }
+        }
+      ]
+    }
   }
 };

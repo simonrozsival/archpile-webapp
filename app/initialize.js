@@ -7,8 +7,9 @@ import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
 import { reduxReactFirebase } from 'redux-react-firebase';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import App from './components/App';
+import App from './containers/App';
 import PlaceDetail from './containers/PlaceDetail';
+import AddPlace from './containers/AddPlace';
 import reducers from './reducers';
 
 //
@@ -60,6 +61,7 @@ const load = () => {
         <Router history={history}>
           <Route path='/' component={App}>
             <Route path='hromada/:uid' component={PlaceDetail} />
+            <Route path='nova-hromada/:lon/:lat' component={AddPlace} />
           </Route>
         </Router>
       </Provider>

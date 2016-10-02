@@ -42,6 +42,8 @@ class YoutubeVideo extends Component {
 
     return (
       <ListItem
+        href={`https://youtube.com/watch?v=${this.props.id}`}
+        target='_blank'
         primaryText={title}
         secondaryText={authorName}
         leftAvatar={<Avatar src={thumbnailUrl} />}
