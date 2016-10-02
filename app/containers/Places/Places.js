@@ -47,12 +47,11 @@ class Places extends Component {
 
     return (
       <div>
-        <FloatingActionButton className={styles.floatingButton}>
+        <FloatingActionButton className={styles.floatingButton} onClick={() => this.togglePlusMode()}>
           {addingMode
-            ? <NavigationClose secondary onClick={this.togglePlusMode} />
-            : <ContentAdd onClick={this.togglePlusMode} />}
+            ? <NavigationClose secondary />
+            : <ContentAdd />}
         </FloatingActionButton>
-        {/*
         <Map
           {...props}
           center={center}
@@ -74,7 +73,6 @@ class Places extends Component {
             <Marker position={tmpPin.coords} />
           )}
         </Map>
-        */}
       </div>
     );
   }
